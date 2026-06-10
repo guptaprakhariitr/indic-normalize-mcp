@@ -1,0 +1,20 @@
+{
+  "$schema": "https://smithery.ai/schema/server.json",
+  "name": "indic-normalize-mcp",
+  "displayName": "Indic Normalize",
+  "description": "Indic-language transliteration + Indian name/address/PIN normalization. Wraps Aksharamukha + Wikidata + India Post.",
+  "version": "0.2.0",
+  "license": "MIT",
+  "homepage": "https://indic-normalize-mcp.workers.dev",
+  "categories": ["i18n", "india", "utility"],
+  "tags": ["indic", "devanagari", "tamil", "transliteration", "aksharamukha", "india", "pincode"],
+  "transport": { "type": "http", "url": "https://indic-normalize-mcp.workers.dev/mcp" },
+  "auth": { "type": "bearer", "freeTier": { "monthlyCalls": 200, "ratePerMinute": 20 } },
+  "tools": ["transliterate", "detect_script", "normalize_name", "normalize_address", "pincode_to_locality", "state_from_pan"],
+  "pricing": { "currency": "USD", "tiers": [
+    { "name": "Free", "price": 0,  "monthlyCalls": 200 },
+    { "name": "Solo", "price": 9,  "monthlyCalls": 5000 },
+    { "name": "Team", "price": 29, "monthlyCalls": 25000 },
+    { "name": "Pro",  "price": 79, "monthlyCalls": 100000 }
+  ] }
+}
