@@ -51,7 +51,7 @@ See `src/tools.ts` for the JSON Schema input.
 {
   "mcpServers": {
     "indic-normalize-mcp": {
-      "url": "https://indic-normalize-mcp.prakhar-cognizance.workers.dev/mcp",
+      "url": "https://indic-normalize-mcp.atlasword.workers.dev/mcp",
       "headers": { "Authorization": "Bearer YOUR_API_KEY" }
     }
   }

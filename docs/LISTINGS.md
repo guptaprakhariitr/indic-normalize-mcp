@@ -25,7 +25,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 - **Display name:** `Indic Normalize`
 - **Description:** `Indic-language transliteration + Indian name/address/PIN normalization. Wraps Aksharamukha + Wikidata + India Post.`
 - **GitHub URL:** `https://github.com/guptaprakhariitr/indic-normalize-mcp`
-- **Endpoint URL:** `https://indic-normalize-mcp.prakhar-cognizance.workers.dev/mcp`
+- **Endpoint URL:** `https://indic-normalize-mcp.atlasword.workers.dev/mcp`
 - **Tags:** indic, devanagari, tamil, transliteration, aksharamukha, india, pincode, pan, gstin
 - **License:** MIT
 - **Transport:** HTTP (remote)
@@ -50,7 +50,7 @@ Auto-crawls GitHub by repo topic `mcp-server`. Already tagged. Indexes within 24
 ### Twitter / X thread template
 > Just shipped indic-normalize-mcp — Model Context Protocol server: indic-language transliteration + indian name/address/pin normalization.
 >
-> Endpoint: https://indic-normalize-mcp.prakhar-cognizance.workers.dev/mcp
+> Endpoint: https://indic-normalize-mcp.atlasword.workers.dev/mcp
 > GitHub: https://github.com/guptaprakhariitr/indic-normalize-mcp
 >
 > Free tier available. Paid from $9/mo.
