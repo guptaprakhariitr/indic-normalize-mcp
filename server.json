@@ -3,7 +3,7 @@
   "name": "io.github.guptaprakhariitr/indic-normalize-mcp",
   "title": "Indic Normalize",
   "description": "Indic transliteration plus Indian name, address, PIN, PAN, GSTIN normalization.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "websiteUrl": "https://indic-normalize-mcp.atlasword.workers.dev/",
   "repository": {
     "url": "https://github.com/guptaprakhariitr/indic-normalize-mcp",
@@ -13,16 +13,6 @@
     {
       "type": "streamable-http",
       "url": "https://indic-normalize-mcp.atlasword.workers.dev/mcp"
-    }
-  ],
-  "packages": [
-    {
-      "registryType": "npm",
-      "identifier": "@insnapsprakhar/indic-normalize-mcp",
-      "version": "0.2.0",
-      "transport": {
-        "type": "stdio"
-      }
     }
   ]
 }
