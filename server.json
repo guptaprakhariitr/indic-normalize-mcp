@@ -14,12 +14,12 @@
   },
   "packages": [
     {
-      "registry_name": "remote",
-      "name": "indic-normalize-mcp",
-      "version": "0.2.0",
-      "runtime_hint": "http",
-      "remote_url": "https://indic-normalize-mcp.atlasword.workers.dev/mcp",
-      "transport_type": "http"
+      "registryType": "npm",
+      "identifier": "@insnapsprakhar/indic-normalize-mcp",
+      "version": "0.1.0",
+      "transport": {
+        "type": "stdio"
+      }
     }
   ],
   "remotes": [
@@ -43,5 +43,6 @@
     "pincode",
     "pan",
     "gstin"
-  ]
+  ],
+  "version": "0.0.2"
 }
