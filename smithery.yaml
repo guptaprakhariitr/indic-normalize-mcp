@@ -1,0 +1,69 @@
+# Smithery registry config — https://smithery.ai/docs/build/project-config/smithery-yaml
+# This is an HTTP-transport MCP server; Smithery hosts the listing and proxies
+# clients straight to our Cloudflare Workers endpoint.
+
+name: indic-normalize-mcp
+displayName: Indic Normalize
+description: |
+  Indic-language transliteration + Indian name/address/PIN normalization. Wraps Aksharamukha + Wikidata + India Post.
+homepage: https://indic-normalize-mcp.atlasword.workers.dev
+repository: https://github.com/guptaprakhariitr/indic-normalize-mcp
+license: MIT
+version: "0.2.0"
+
+runtime: container
+
+startCommand:
+  type: http
+  url: https://indic-normalize-mcp.atlasword.workers.dev/mcp
+  configSchema:
+    type: object
+    properties:
+      apiKey:
+        type: string
+        title: API key (optional)
+        description: |
+          Bearer token from https://indic-normalize-mcp.atlasword.workers.dev/upgrade.
+          Leave blank for the anonymous free tier (~100 calls/month/IP).
+    required: []
+  exampleConfig:
+    apiKey: ""
+  commandFunction: |-
+    (config) => ({
+      type: "http",
+      url: "https://indic-normalize-mcp.atlasword.workers.dev/mcp",
+      headers: config.apiKey ? { Authorization: `Bearer ${config.apiKey}` } : {}
+    })
+
+remote:
+  type: http
+  url: https://indic-normalize-mcp.atlasword.workers.dev/mcp
+
+categories:
+  - i18n
+  - india
+  - utility
+tags:
+  - indic
+  - devanagari
+  - tamil
+  - transliteration
+  - aksharamukha
+  - india
+  - pincode
+
+tools:
+  - name: transliterate
+  - name: detect_script
+  - name: normalize_name
+  - name: normalize_address
+  - name: pincode_to_locality
+  - name: state_from_pan
+
+auth:
+  type: bearer
+  required: false
+  description: |
+    Optional. Anonymous free tier works for ~100 calls/month per IP. For higher
+    quotas, grab a key from https://indic-normalize-mcp.atlasword.workers.dev/upgrade and pass
+    it as `Authorization: Bearer <key>`.

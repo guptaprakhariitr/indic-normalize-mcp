@@ -203,3 +203,27 @@ MIT — see [LICENSE](LICENSE).
 - **Live status page:** [https://mcp-hub.atlasword.workers.dev/status](https://mcp-hub.atlasword.workers.dev/status)
 - **Machine-readable status:** [https://mcp-hub.atlasword.workers.dev/status.json](https://mcp-hub.atlasword.workers.dev/status.json)
 - **Source repo:** [https://github.com/guptaprakhariitr/indic-normalize-mcp](https://github.com/guptaprakhariitr/indic-normalize-mcp)
+
+
+## Install via npm (one-liner)
+
+A thin launcher is published as [`@atlasword/indic-normalize-mcp`](https://www.npmjs.com/package/@atlasword/indic-normalize-mcp) on npm. No manual URL to copy/paste:
+
+```bash
+npx -y @atlasword/indic-normalize-mcp
+```
+
+Or wire it into your MCP client:
+
+```jsonc
+{
+  "mcpServers": {
+    "indic-normalize": {
+      "command": "npx",
+      "args": ["-y", "@atlasword/indic-normalize-mcp"]
+    }
+  }
+}
+```
+
+The npm package is just a launcher — it shells out to [`mcp-remote`](https://www.npmjs.com/package/mcp-remote) and points it at the hosted endpoint (`https://indic-normalize-mcp.atlasword.workers.dev/mcp`).
