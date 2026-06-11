@@ -207,10 +207,10 @@ MIT — see [LICENSE](LICENSE).
 
 ## Install via npm (one-liner)
 
-A thin launcher is published as [`@atlasword/indic-normalize-mcp`](https://www.npmjs.com/package/@atlasword/indic-normalize-mcp) on npm. No manual URL to copy/paste:
+A thin launcher is published as [`@insnapsprakhar/indic-normalize-mcp`](https://www.npmjs.com/package/@insnapsprakhar/indic-normalize-mcp) on npm. No manual URL to copy/paste:
 
 ```bash
-npx -y @atlasword/indic-normalize-mcp
+npx -y @insnapsprakhar/indic-normalize-mcp
 ```
 
 Or wire it into your MCP client:
@@ -220,7 +220,7 @@ Or wire it into your MCP client:
   "mcpServers": {
     "indic-normalize": {
       "command": "npx",
-      "args": ["-y", "@atlasword/indic-normalize-mcp"]
+      "args": ["-y", "@insnapsprakhar/indic-normalize-mcp"]
     }
   }
 }
